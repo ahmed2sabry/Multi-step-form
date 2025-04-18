@@ -351,7 +351,7 @@ form.addEventListener("submit", function (e) {
 
   const html = `<div class="message">
           <img
-            src="../multi-step-form-main/assets/images/icon-thank-you.svg"
+            src="../assets/images/icon-thank-you.svg"
             alt="thanks for confirming"
             class="message__icon"
           />
