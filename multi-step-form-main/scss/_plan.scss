@@ -1,0 +1,106 @@
+.plans {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1.5rem;
+
+  .plan {
+    &__input {
+      display: none;
+      &:checked ~ label {
+        background-color: $color-small-container;
+        border: 1px solid $color-button;
+      }
+    }
+    &__label {
+      display: inline-block;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4rem;
+      border: 1px solid $color-light-grey;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    &__icon {
+      width: 4rem;
+    }
+    &__details {
+    }
+    &__text {
+      color: $color-primary;
+      font-weight: $bold;
+      font-size: 2rem;
+    }
+    &__price {
+      font-size: 2rem;
+      // display: none;
+    }
+    &__free {
+      color: $color-primary;
+      display: none;
+    }
+  }
+}
+.check {
+  grid-column: 1/-1;
+
+  padding: 1.5rem;
+  background-color: $color-small-container;
+  border-radius: 0.8rem;
+
+  &__input {
+    display: none;
+    &:checked ~ .check__box .check__label .check__btn::after {
+      left: 2.9rem;
+    }
+    &:checked ~ .check__box .check__text.check__text--month {
+      color: $color-light-grey;
+    }
+    &:checked ~ .check__box .check__text.check__text--year {
+      color: $color-primary;
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  &__label {
+    cursor: pointer;
+  }
+  &__text {
+  }
+  &__btn {
+    display: inline-block;
+    padding: 1.3rem 2.8rem;
+    background-color: $color-primary;
+    border-radius: 100rem;
+    margin-top: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      padding: 1rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0rem;
+      margin: 0.3rem;
+      background-color: #fff;
+      transition: all 0.2s ease-out;
+    }
+  }
+  &__text {
+    font-weight: $bold;
+    transition: all 0.2s;
+    &--month {
+      color: $color-primary;
+    }
+  }
+}

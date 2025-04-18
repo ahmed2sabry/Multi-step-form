@@ -1,0 +1,44 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2.2rem;
+  overflow-y: auto;
+  &__row {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__error {
+    color: $color-secondary;
+    visibility: hidden;
+  }
+  &__label {
+    color: $color-primary;
+    margin-left: 0.4rem;
+    font-weight: $medium;
+  }
+  &__input {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid $color-light-grey;
+    color: $color-primary;
+    font-size: inherit;
+    font-weight: $bold;
+    &::placeholder {
+      color: $color-grey;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $color-button;
+    }
+  }
+  &__input.invalid {
+    border: 1px solid $color-secondary;
+  }
+}

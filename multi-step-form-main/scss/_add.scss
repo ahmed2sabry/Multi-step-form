@@ -1,0 +1,74 @@
+.addons {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  row-gap: 1.8rem;
+
+  .addon {
+    cursor: pointer;
+    grid-column: 1/-1;
+
+    &__input {
+      display: none;
+      &:checked ~ label span::after {
+        opacity: 1;
+      }
+      &:checked ~ label span {
+        background-color: $color-button;
+      }
+      &:checked ~ label {
+        border: 1px solid $color-button;
+        background-color: $color-small-container;
+      }
+    }
+    &__label {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1.8rem 1.5rem;
+      gap: 2rem;
+
+      border: 1px solid $color-light-grey;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    &__btn {
+      padding: 1.2rem;
+      display: inline-block;
+      border: 1px solid $color-light-grey;
+      border-radius: 0.5rem;
+      position: relative;
+      transition: all 0.2s;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.1rem;
+        position: absolute;
+
+        background-image: url(../multi-step-form-main/assets/images/icon-checkmark.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0.7rem;
+        left: 0.4rem;
+        opacity: 0;
+      }
+    }
+
+    &__details {
+    }
+    &__heading {
+      color: $color-primary;
+      font-size: 2.1rem;
+      font-weight: $bold;
+    }
+    &__text {
+    }
+    &__price {
+      margin-left: auto;
+      color: $color-button;
+    }
+  }
+}

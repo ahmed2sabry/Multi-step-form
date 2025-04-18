@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+    <link href="../scss/main.css" rel="stylesheet" />
+    <script defer src="../script.js"></script>
+  </head>
+  <body>
+    <h1 class="primary__heading">multi step form</h1>
+    <div class="container">
+      <aside class="aside scrollbar">
+        <div class="aside__step aside__step--acitve" data-tab="1">
+          <p class="aside__index">1</p>
+          <div class="aside__details">
+            <p class="aside__subhead">step 1</p>
+            <p class="tertiary__heading">your info</p>
+          </div>
+        </div>
+        <div class="aside__step" data-tab="2">
+          <p class="aside__index">2</p>
+          <div class="aside__details">
+            <p class="aside__subhead">step 2</p>
+            <p class="tertiary__heading">select plan</p>
+          </div>
+        </div>
+        <div class="aside__step" data-tab="3">
+          <p class="aside__index">3</p>
+          <div class="aside__details">
+            <p class="aside__subhead">step 3</p>
+            <p class="tertiary__heading">add-ons</p>
+          </div>
+        </div>
+        <div class="aside__step" data-tab="4">
+          <p class="aside__index">4</p>
+
+          <div class="aside__details">
+            <p class="aside__subhead">step 4</p>
+            <p class="tertiary__heading">summary</p>
+          </div>
+        </div>
+      </aside>
+
+      <form class="main">
+        <div class="content content--1 content--active">
+          <div class="form form--1 scrollbar">
+            <div class="heading">
+              <h2 class="heading__secondary">Personal info</h2>
+              <p class="heading__sub">
+                Please provide your name, email, address, and phone number.
+              </p>
+            </div>
+            <div class="form__row">
+              <div class="form__text">
+                <label for="name" class="form__label">Name</label>
+                <span class="form__error">invalid input</span>
+              </div>
+              <input
+                id="name"
+                placeholder="e.g. Sayed Hani"
+                class="form__input"
+                type="text"
+                required
+              />
+            </div>
+
+            <div class="form__row">
+              <div class="form__text">
+                <label for="email" class="form__label">Email Address</label>
+                <span class="form__error">invalid input</span>
+              </div>
+              <input
+                id="email"
+                placeholder="e.g. Sayedhani@yahoo.com"
+                class="form__input"
+                type="email"
+                required
+              />
+            </div>
+
+            <div class="form__row">
+              <div class="form__text">
+                <label for="number" class="form__label">Phone Number</label>
+                <span class="form__error">invalid input</span>
+              </div>
+              <input
+                id="number"
+                placeholder="e.g. +20 126 543 345"
+                class="form__input"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="content content--2">
+          <div class="form form--2 scrollbar">
+            <div class="heading">
+              <h2 class="heading__secondary">Select your plan</h2>
+              <p class="heading__sub">
+                You have the option of monthly or yearly billing.
+              </p>
+            </div>
+            <div class="plans">
+              <div class="plan plan--1">
+                <input
+                  id="arcade"
+                  type="radio"
+                  class="plan__input"
+                  name="plan"
+                  checked
+                />
+                <label class="plan__label" for="arcade">
+                  <img
+                    class="plan__icon"
+                    src="assets/images/icon-arcade.svg"
+                    alt="arcade"
+                  />
+                  <div class="plan__details">
+                    <p class="plan__text">Arcade</p>
+                    <p class="plan__price">$9/mo</p>
+                    <p class="plan__free">2 months free</p>
+                  </div>
+                </label>
+              </div>
+
+              <div class="plan plan--2">
+                <input
+                  id="advanced"
+                  type="radio"
+                  class="plan__input"
+                  name="plan"
+                />
+                <label class="plan__label" for="advanced">
+                  <img
+                    class="plan__icon"
+                    src="assets/images/icon-advanced.svg"
+                    alt="advanced"
+                  />
+                  <div class="plan__details">
+                    <p class="plan__text">Advanced</p>
+                    <p class="plan__price">$12/mo</p>
+                    <p class="plan__free">2 months free</p>
+                  </div>
+                </label>
+              </div>
+
+              <div class="plan plan--3">
+                <input id="pro" type="radio" class="plan__input" name="plan" />
+                <label class="plan__label" for="pro">
+                  <img
+                    class="plan__icon"
+                    src="assets/images/icon-pro.svg"
+                    alt="pro"
+                  />
+                  <div class="plan__details">
+                    <p class="plan__text">Pro</p>
+                    <p class="plan__price">$15/mo</p>
+                    <p class="plan__free">2 months free</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="check">
+              <input
+                id="check"
+                type="checkbox"
+                class="check__input"
+                name="plan"
+              />
+              <div class="check__box">
+                <span class="check__text check__text--month">Monthly</span>
+
+                <label class="check__label" for="check"
+                  ><span class="check__btn"></span
+                ></label>
+
+                <span class="check__text check__text--year">Yearly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content content--3">
+          <div class="form form--3 scrollbar">
+            <div class="heading">
+              <h2 class="heading__secondary">Pick add-ons</h2>
+              <p class="heading__sub">
+                Add-ons help to enhance your gaming experience.
+              </p>
+            </div>
+            <div class="addons">
+              <div class="addon addon--1">
+                <input id="online" type="checkbox" class="addon__input" />
+                <label for="online" class="addon__label"
+                  ><span class="addon__btn"></span>
+                  <div class="addon__details">
+                    <h4 class="addon__heading">Online service</h4>
+                    <p class="addon__text">Access to multiplayer games</p>
+                  </div>
+                  <p class="addon__price">+$1/mo</p>
+                </label>
+              </div>
+
+              <div class="addon addon--2">
+                <input id="storage" type="checkbox" class="addon__input" />
+                <label for="storage" class="addon__label"
+                  ><span class="addon__btn"></span>
+                  <div class="addon__details">
+                    <h4 class="addon__heading">Larger storage</h4>
+                    <p class="addon__text">Extra 1TB cloud save</p>
+                  </div>
+                  <p class="addon__price">+$2/mo</p>
+                </label>
+              </div>
+
+              <div class="addon addon--3">
+                <input id="profile" type="checkbox" class="addon__input" />
+                <label for="profile" class="addon__label"
+                  ><span class="addon__btn"></span>
+
+                  <div class="addon__details">
+                    <h4 class="addon__heading">Customizable profile</h4>
+                    <p class="addon__text">Custom theme on your profile</p>
+                  </div>
+                  <p class="addon__price">+$2/mo</p>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content content--4">
+          <div class="form form--4 scrollbar">
+            <div class="heading">
+              <h2 class="heading__secondary">Finishing up</h2>
+              <p class="heading__sub">
+                Double-check everything looks OK before confirming.
+              </p>
+            </div>
+            <div class="finish">
+              <!-- <div class="finish__monthly">
+                <div class="finish__details">
+                  <p class="finish__text">Arcade (Monthly)</p>
+                  <button class="finish__btn">change</button>
+                </div>
+                <p class="finish__price">$12/mo</p>
+              </div>
+
+              <ul class="list">
+                <li class="list__item">
+                  <p class="list__text">Online service</p>
+                  <p class="list__price">+$1/mo</p>
+                </li>
+                <li class="list__item">
+                  <p class="list__text">Larger storage</p>
+                  <p class="list__price">+$2/mo</p>
+                </li>
+                <li class="list__item">
+                  <p class="list__text">Customizable profile</p>
+                  <p class="list__price">+$2/mo</p>
+                </li>
+              </ul> -->
+            </div>
+            <div class="total">
+              <!-- <p class="total__text">Total (per month)</p>
+              <p class="total__price">$14/mo</p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <!-- <button
+            type="button"
+            class="pagination__btn pagination__btn--previous"
+          >
+            Go Back
+          </button>
+          <button type="button" class="pagination__btn pagination__btn--next">
+            Next Step
+          </button>
+          <button
+            type="submit"
+            class="pagination__btn pagination__btn--confirm"
+          >
+            Confirm
+          </button> -->
+        </div>
+        <!-- <div class="message">
+          <img
+            src="../multi-step-form-main/assets/images/icon-thank-you.svg"
+            alt="thanks for confirming"
+            class="message__icon"
+          />
+          <h4 class="message__heading">Thank you!</h4>
+          <p class="message__text">
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@aymen&cholbob.com.
+          </p>
+        </div> -->
+      </form>
+    </div>
+  </body>
+</html>

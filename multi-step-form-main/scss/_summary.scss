@@ -1,0 +1,81 @@
+.finish {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  background-color: $color-small-container;
+  border-radius: 0.5rem;
+  row-gap: 1rem;
+  padding: 1.6rem 1.5rem;
+
+  &__monthly {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 1rem;
+  }
+  &__details {
+  }
+  &__text {
+    font-size: 2rem;
+    color: $color-primary;
+    font-weight: $bold;
+  }
+  &__btn {
+    background-color: $color-small-container;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: underline;
+    font-weight: $medium;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-button;
+    }
+  }
+  &__price {
+    font-weight: $bold;
+    color: $color-primary;
+  }
+}
+
+.list {
+  grid-column: 1/-1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  &__item {
+    &:first-child {
+      border-top: 1px solid $color-light-grey;
+      padding-top: 2rem;
+    }
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+  }
+  &__price {
+    color: $color-primary;
+  }
+}
+
+.total {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.5rem;
+  &__text {
+  }
+  &__price {
+    color: $color-button;
+    font-weight: $bold;
+    font-size: 1.9rem;
+  }
+}
