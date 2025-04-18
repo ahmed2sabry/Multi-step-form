@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Ubuntu";
-  src: url("../multi-step-form-main/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Ubuntu-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../multi-step-form-main/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Ubuntu-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../multi-step-form-main/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Ubuntu-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 *,
@@ -284,7 +284,7 @@ body {
   width: 1.5rem;
   height: 1.1rem;
   position: absolute;
-  background-image: url(../multi-step-form-main/assets/images/icon-checkmark.svg);
+  background-image: url(../assets/images/icon-checkmark.svg);
   background-size: cover;
   background-repeat: no-repeat;
   top: 0.7rem;
@@ -498,7 +498,7 @@ body {
 }
 
 .aside {
-  background-image: url("../multi-step-form-main/assets/images/bg-sidebar-desktop.svg");
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -509,7 +509,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .aside {
     width: 100%;
-    background-image: url("../multi-step-form-main/assets/images/bg-sidebar-mobile.svg");
+    background-image: url("../assets/images/bg-sidebar-mobile.svg");
     background-image: cover;
   }
 }
